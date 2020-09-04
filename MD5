@@ -1,6 +1,6 @@
-8fde479a1cd4a96669798d2f95368d4c *DESCRIPTION
+352e778c6a77797a79e663d8a52f1d86 *DESCRIPTION
 ead9d097246be5ccd892385ed4dcde38 *NAMESPACE
-35fe8b68c161dc5d60e2e02dea5c9fa8 *NEWS.md
+47df6176e6ced8dcdb79724ca8fd6335 *NEWS.md
 3118fbed38782d9458fea18ca53d1a6f *R/OU.R
 09302ff89fbe1946c30db69db1d12fe6 *R/RcppExports.R
 23c3b7add089c87640735e5c0e7a50c7 *R/WOU.R
@@ -91,7 +91,7 @@ e439acc75f6b31b8c52fa4db6dfc6342 *src/Makevars.win
 d703d0665c3c45e5c05d3a1238d96b43 *src/WN-1D.cpp
 6cda2f7b20a2108fd0ee17dffc1f7680 *src/WN-2D.cpp
 0b19f71e110a4b1f023a4246529ffdf8 *src/auxiliary.cpp
-c3e2a38ae2a9580787f2fb88d913be4e *src/crankNicolson.cpp
+ec92d4fc5370384c0708bfe1872f7a26 *src/crankNicolson.cpp
 146fcffed33d491af293e17a962e8591 *src/drifts.cpp
 24f6a608324a62f8b64f885c717c0f8a *src/euler.cpp
 f5b3160ce8fb506894df5eefabb30547 *src/logLikWouPairs.cpp
