@@ -41,7 +41,7 @@ arma::vec dWn1D(arma::vec x, double mu, double sigma, int maxK = 2, double expTr
 
   // Winding numbers
   int lk = 2 * maxK + 1;
-  arma::rowvec twokpi = arma::linspace<arma::rowvec>(-maxK * 2 * PI, maxK * 2 * PI, lk);
+  arma::rowvec twokpi = arma::linspace<arma::rowvec>(-maxK * 2 * M_PI, maxK * 2 * M_PI, lk);
 
   // 2 * variance and inverse
   double sd2 = 2 * sigma * sigma;
@@ -51,7 +51,7 @@ arma::vec dWn1D(arma::vec x, double mu, double sigma, int maxK = 2, double expTr
   x -= mu;
 
   // Log-normalizing constant
-  double lognormconstsd2 = -0.5 * log(PI * sd2);
+  double lognormconstsd2 = -0.5 * log(M_PI * sd2);
 
   /*
    * Computation of the density: wrapping
@@ -97,7 +97,7 @@ arma::vec dWn1D(arma::vec x, double mu, double sigma, int maxK = 2, double expTr
 //' @return A vector of size \code{n} containing the tpd evaluated at \code{x}.
 //' @details See Section 3.3 in García-Portugués et al. (2019) for details. See \code{\link{dTpdWou}} for the general case (less efficient for 2D).
 //' @references
-//' García-Portugués, E., Sørensen, M., Mardia, K. V. and Hamelryck, T. (2019) Langevin diffusions on the torus: estimation and applications. \emph{Statistics and Computing}, 29(2):1--22. \url{https://doi.org/10.1007/s11222-017-9790-2}
+//' García-Portugués, E., Sørensen, M., Mardia, K. V. and Hamelryck, T. (2019) Langevin diffusions on the torus: estimation and applications. \emph{Statistics and Computing}, 29(2):1--22. \doi{10.1007/s11222-017-9790-2}
 //' @examples
 //' t <- 0.5
 //' alpha <- 1
@@ -125,7 +125,7 @@ arma::vec dTpdWou1D(arma::vec x, arma::vec x0, double t, double alpha, double mu
 
   // Winding numbers
   int lk = 2 * maxK + 1;
-  arma::rowvec twokpi = arma::linspace<arma::rowvec>(-maxK * 2 * PI, maxK * 2 * PI, lk);
+  arma::rowvec twokpi = arma::linspace<arma::rowvec>(-maxK * 2 * M_PI, maxK * 2 * M_PI, lk);
 
   // Stationary variance (x 2)
   double sd2 = sigma * sigma / alpha;
@@ -137,7 +137,7 @@ arma::vec dTpdWou1D(arma::vec x, arma::vec x0, double t, double alpha, double mu
   double sd2t = sigma * sigma * (1 - exp(-2 * alpha * t)) / alpha;
 
   // Log-normalizing constant
-  double lognormconstsd2t = -0.5 * log(PI * sd2t);
+  double lognormconstsd2t = -0.5 * log(M_PI * sd2t);
 
   /*
    * Weights of the winding numbers for each data point
